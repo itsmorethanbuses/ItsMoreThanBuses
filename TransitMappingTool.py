@@ -389,10 +389,10 @@ class TransitMappingToolGUI():
     #Method to choose the OSM filepath
     def selectOSM(self):
         if self.OS == "OSX" or self.OS == "Linux":
-            self.OSMFilePath = askopenfilename(initialdir = "/", title = "Select OSM File", filetypes=(("OSM Files", "*.PBF"), ("all files", "*.*")))
+            self.OSMFilePath = askopenfilename(initialdir = "/", title = "Select OSM File", filetypes=(("OSM Files", "*.PBF .OSM"), ("all files", "*.*")))
 
         elif self.OS == "Windows":
-            self.OSMFilePath = askopenfilename(initialdir = "C:\\", title = "Select OSM File", filetypes=(("OSM Files", "*.PBF"), ("all files", "*.*")))
+            self.OSMFilePath = askopenfilename(initialdir = "C:\\", title = "Select OSM File", filetypes=(("OSM Files", "*.PBF .OSM"), ("all files", "*.*")))
 
         self.OSMLabelText.set(self.OSMFilePath) #display selected file path
         self.OSMFilePathParent = os.path.dirname(self.OSMFilePath) #set directory path for folder containing OSM and GTFS files
